@@ -40,25 +40,9 @@ Gracias a este endpoint podemos incluir a un nuevo personaje para que forme part
 parametos = {"person_name": "example person"}
 "example person" debe ser un string
 
+### sentimientos
+- "/sentimiento/<person_name>"
+Con requests a la API podemos analizar los sentimientos de los mensajes de cada personaje  para saber si se expresa feliz o triste.
 
-
-@app.route("/sentimiento/<person_name>")
-def sent(person_name):
-    df = ag.analisisdesentimiento(person_name)
-    df["frasestoken"] = df.sentence.apply(ag.tokenizer)
-    df["sentimiento"] = df.frasestoken.apply(ag.sentiment)
-    return str(df.sentimiento.mean())
- 
-
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
-
-
-### @post
-
-
-### Análisis de sentimiento
 
 
