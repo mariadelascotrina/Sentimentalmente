@@ -64,7 +64,7 @@ def nuevomensaje(sentence, person_id, episode_episode_id):
     
     return f"Se ha introducido correctamente: {sentence} {person_id} {episode_episode_id}"
 
-def nuevoperson( person_name):
+def nuevoperson(person_name):
 
     engine.execute(f"""
     INSERT INTO person (person_name)
