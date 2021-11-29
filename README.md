@@ -28,6 +28,7 @@ Este endpoint te da las frases de cada personaje en cada capítulo. En <nombre_d
 
 
 ### @post
+Los endpoints tipo post te permiten incluir información nueva en tu base de datos
 - "/nuevafrase":
 Gracias a este endpoint podemos incluir frases nuevas en nuestra base de datos. Los parámetros para incluir la información son:
 parametos = {"sentence": "example sentence", "person_id": 14, "episode_episode_id": 3 }
@@ -40,9 +41,18 @@ Gracias a este endpoint podemos incluir a un nuevo personaje para que forme part
 parametos = {"person_name": "example person"}
 "example person" debe ser un string
 
-### sentimientos
+### Sentimientos
+El análisis de sentiemientos te permite conocer la naturaleza de los personajes
 - "/sentimiento/<person_name>"
 Con requests a la API podemos analizar los sentimientos de los mensajes de cada personaje  para saber si se expresa feliz o triste.
 
+## Librerías utilizadas
+- pandas https://pandas.pydata.org/docs/
+- textblob https://textblob.readthedocs.io/en/dev/
+- re https://docs.python.org/3/library/re.html
+- spacy https://spacy.io/usage/spacy-101
+- nltk https://www.nltk.org/
+- flask https://flask.palletsprojects.com/en/2.0.x/
+- jsonify https://www.kite.com/python/docs/flask.jsonify
 
 
